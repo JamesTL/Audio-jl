@@ -10,13 +10,13 @@ define(
 
         // Constructor
 
-        function Validation(){
+        function AudioObject(){
             //
 
         }
 
         // Define the class methods.
-        Validation.prototype = {
+        AudioObject.prototype = {
 
             is_empty_string : function(str){
 
@@ -40,7 +40,7 @@ define(
 
 
         // Return the module constructor.
-        return( Validation );
+        return(AudioObject)
 
         // -------------------------------------------------- //
 

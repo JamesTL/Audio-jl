@@ -4,27 +4,29 @@
 // Load the validation code and describe tests.
     define(
     [
-        "model/audio_core"
+        "model/audio_object"
     ],
-    function( Validation ){
+    function( AudioObject ){
 
 
 
 
         // Describe the test suite for this module.
         describe(
-            "The validation modules provides miscellaneous validation functions for content.",
+            "The AudioObjet module provides instantiation and core functionality for an audiocontext",
             function(){
 
 
                 // Create our test module.
-                //var myValidator = new Validation();
+                var myAudioObject = new AudioObject();
+                //replace with tests approp
+
+                 it( "Should Create audio context when called",
+                     function(){
 
 
-
-
-
-               /* it("string_length_match() - if str.length == len return true ,else false",
+                     });
+              /*   it("string_length_match() - if str.length == len return true ,else false",
                     function(){
                         expect( myValidator.string_length_match("four", 4)).toBe(true);
                         expect( myValidator.string_length_match("flour", 5)).toBe(true);
