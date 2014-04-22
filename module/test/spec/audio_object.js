@@ -20,6 +20,7 @@
                 // Create our test module.
                 var myAudioObject = new AudioObject();
                 console.log(myAudioObject);
+                console.log(myAudioObject.return_Ctx(myAudioObject));
                 //replace with tests approp
 
                  it( "It Should Create AudioContext when called",
@@ -28,6 +29,15 @@
                         var  isAudioContext  =  myAudioObject.context instanceof AudioContext;
                         expect(isAudioContext).toBe(true);
                      });
+
+                  it("It should provide a mechanism to directly return the AudioContext",function(){
+
+                        var isAudioCtx= myAudioObject.return_Ctx(myAudioObject) instanceof AudioContext;
+                        expect(isAudioCtx).toBe(true);
+
+
+
+                })
 }
         );
 

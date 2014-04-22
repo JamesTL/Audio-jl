@@ -26,21 +26,11 @@ define(
         // Define the class methods.
         AudioObject.prototype = {
 
-            is_empty_string : function(str){
+            //directly return the AudioContext - it's AudioObject container.
+            return_Ctx : function(ctx){
 
-                 return str.length === 0 ;
+                 return ctx.context ;
 
-            },
-
-            test_regex : function(str,reg){
-
-                 return  reg.test(str);
-
-            },
-
-            string_length_match: function(str, len){
-
-                 return str.length === len ;
             }
 
        };
