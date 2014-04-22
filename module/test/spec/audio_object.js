@@ -13,36 +13,22 @@
 
         // Describe the test suite for this module.
         describe(
-            "The AudioObjet module provides instantiation and core functionality for an audiocontext",
+            "The AudioObjet module provides instantiation and core functionality for an audioContext",
             function(){
 
 
                 // Create our test module.
                 var myAudioObject = new AudioObject();
+                console.log(myAudioObject);
                 //replace with tests approp
 
-                 it( "Should Create audio context when called",
+                 it( "It Should Create AudioContext when called",
                      function(){
 
-
+                        var  isAudioContext  =  myAudioObject.context instanceof AudioContext;
+                        expect(isAudioContext).toBe(true);
                      });
-              /*   it("string_length_match() - if str.length == len return true ,else false",
-                    function(){
-                        expect( myValidator.string_length_match("four", 4)).toBe(true);
-                        expect( myValidator.string_length_match("flour", 5)).toBe(true);
-                        expect( myValidator.string_length_match("flourmill", 35)).not.toBe(true);
-                        expect( myValidator.string_length_match("flourmill", 349)).toBe(false);
-                        //empty string
-                        expect( myValidator.string_length_match("", 0)).toBe(true);
-                        //will matchwhitespace as a characters
-                        expect( myValidator.string_length_match(" ", 1)).toBe(true);
-                    }
-
-                );*/
-
-
-
- }
+}
         );
 
 

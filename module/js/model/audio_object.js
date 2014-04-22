@@ -12,8 +12,16 @@ define(
 
         function AudioObject(){
             //
+            var contextClass = (window.AudioContext|| window.webkitAudioContext)
 
-        }
+            if(contextClass){
+                this.context = new contextClass();
+            }
+            else{
+
+               return;
+            }
+         }
 
         // Define the class methods.
         AudioObject.prototype = {
