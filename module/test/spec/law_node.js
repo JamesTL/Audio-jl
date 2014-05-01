@@ -1,6 +1,6 @@
 /**
  * Created by jameslove on 30/04/2014.
- * * test for law_audioCOntext AMD- which will create  an audioContext
+ * * test for law_audioContext AMD- which will create  an audioContext
  */
 // Load the validation code and describe tests.
 define(
@@ -16,35 +16,27 @@ define(
             function(){
                 // Create our test module.
                 var testLaw = new Law_audioContext();
-                console.log(testLaw);
-                //console.log(testLaw.return_Ctx(testLaw));
-                //replace with tests approp
-                    //test
+                var  myLawNode  = new Law_Node(testLaw.context);
+                    console.log(myLawNode.source);
+
 
                 it( "It will create and return and object of type Law_Node",
                     function(){
 
-                        var  myLawNode  = new Law_Node();
+
                         var isLawNode = myLawNode instanceof Law_Node;
                         expect(isLawNode).toBe(true);
                     });
-                  //
 
-               //  it("It must be passed an audioContext to function",
-                 //function(){
+                it("It will create an AudioBufferSourceNode  for the Node using the createBufferSource() function of an auudioCOntent",
+                    function(){
 
-                   //  var noAudioContext= ;
-                   //  expect().toBe(true);
+                        var  isCreateBufferSource =  myLawNode.source instanceof AudioBufferSourceNode;
+                        expect(isCreateBufferSource).toBe(true);
 
-                // };
-
-
-                //it( "It will create a source for the Node using the createBufferSource() function of an auudioCOntent",
-                   // function(){
-                      //  var  isAudioContext  =  testLaw.context instanceof AudioContext;
-                      //  expect(isAudioContext).toBe(true);
-                  //  });
-            }
+                    });
+                //
+             }
         );
     }
 );

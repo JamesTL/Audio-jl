@@ -7,10 +7,13 @@ define(
 
         'use strict';
 
-        function Law_Node(){
+        function Law_Node(ctx){
 
+          this.source = ctx.createBufferSource();
+            console.log(ctx);
 
         }
+
 
         // Return the module constructor.
         return(Law_Node);
