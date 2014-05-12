@@ -7,11 +7,15 @@ define(
 
         'use strict';
 
-        function Law_Node(ctx){
+        function Law_Node(ctx,type ){
 
-          this.source = ctx.createBufferSource();
-            console.log(ctx);
+          if(type ===undefined) this.isBufferSource = ctx.createBufferSource();
+          else
+            if(type ==="gainNode")this.isGainNode = ctx.createGain();
+            else
+              if (type==="oscillatorNode")this.isOscillatorNode = ctx.createOscillator();
 
+            console.log(this);
         }
 
 
